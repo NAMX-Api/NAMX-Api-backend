@@ -1,0 +1,1 @@
+20221122	17:30:09	d959937b-fd3b-4195-a83f-dec65f1b6214	Error: ENOENT: no such file or directory, stat 'C:\wamp64\www\namx-api\views\404.html'
