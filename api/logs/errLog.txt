@@ -1,2 +1,3 @@
 20221122	17:30:09	d959937b-fd3b-4195-a83f-dec65f1b6214	Error: ENOENT: no such file or directory, stat 'C:\wamp64\www\namx-api\views\404.html'
 20221123	09:46:47	20295bfd-0a86-4b4e-817d-a04a256a2aaa	ReferenceError: whitelist is not defined
+20221124	11:33:10	a0218f1a-67ef-41ef-aacb-5c426edb9daf	TypeError: Cannot read properties of undefined (reading 'user')
