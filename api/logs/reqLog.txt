@@ -44,3 +44,5 @@
 20221122	18:28:45	371d461b-f7d6-49db-8f14-c8861df8c1dc	GET	undefined	/refresh
 20221122	18:30:10	b925a162-82ff-4f8a-9eb1-80a3da088d5e	POST	undefined	/auth
 20221122	18:30:20	c690b06f-7130-479a-aedd-5753f5f989de	GET	undefined	/refresh
+20221125	09:40:52	fee66323-3809-444e-b1bd-e64f7e23ba58	GET	undefined	/
+20221125	09:40:52	27569d99-9e1c-4bae-ba77-133a0eb2a488	GET	undefined	/favicon.ico
