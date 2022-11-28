@@ -8,7 +8,8 @@ const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
-const PORT = process.env.PORT || 3500;
+const mongoose = require('mongoose');
+const PORT = process.env.PORT || 3600;
 
 
 // custom middleware logger
@@ -34,9 +35,8 @@ app.use(cookieParser());
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 // routes
-app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
-app.use('/auth', require('./routes/auth'));
+app.use('/auth', require('./routes/auth'), require('./routes/admin'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
@@ -56,5 +56,12 @@ app.all('*', (req, res) => {
 });
 
 app.use(errorHandler);
+
+//Connect to db
+mongoose.connect(
+    process.env.MONGODB_URI,{ useNewUrlParser: true }, () => 
+        console.log('connected to db')
+);
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
