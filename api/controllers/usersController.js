@@ -8,7 +8,7 @@ const getAllUsers = (req, res) => {
 }
 
 const getUser = (req, res) => {
-    const user = usersDB.users.find(emp => emp.id === parseInt(req.params.id));
+    const user = usersDB.users.find(userData => userData.id === parseInt(req.params.id));
     if (!user) {
         return res.status(400).json({ "message": `user ID ${req.params.id} not found` });
     }
