@@ -2,3 +2,14 @@
 20221125	09:40:52	7ada1134-779e-4421-a4e2-07c9b55d23d0	ReferenceError: whitelist is not defined
 20221125	09:40:52	d916bc12-a6b0-449d-a48b-a489cd1dee37	ReferenceError: whitelist is not defined
 20221125	16:26:13	c3272512-7786-46cb-92b2-12115f9382c4	Error: ENOENT: no such file or directory, stat 'C:\Users\youcode\Documents\projects\2eme-annee-project\NAMX-Api-backend\API\views\404.html'
+20221129	15:49:50	783f9994-6e64-42bc-925a-9a6457c511e1	SyntaxError: Unexpected token u in JSON at position 7
+20221129	15:54:35	38f7dcd7-456d-4e44-8a4d-354f4f23a122	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+20221129	15:55:50	b81bee21-e0d6-443a-b1dd-97bdd9c2c2c5	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
