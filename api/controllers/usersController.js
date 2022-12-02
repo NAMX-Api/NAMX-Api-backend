@@ -1,18 +1,19 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
+const usersDB = require('../models/usersModel.js')
+
+const getAllUsers = async (req, res) => {
+    const users = await usersDB.find();
+
+    users
+    ? res.status(200).json(users)
+    : res.status(404).json({ "message": "There are not users yet" })
 }
 
-const getAllUsers = (req, res) => {
-    res.json(usersDB.users);
-}
-
-const getUser = (req, res) => {
-    const user = usersDB.users.find(userData => userData.id === parseInt(req.params.id));
-    if (!user) {
-        return res.status(400).json({ "message": `user ID ${req.params.id} not found` });
-    }
-    res.json(user);
+const getUser = async (req, res) => {
+    const user = await usersDB.findById(req.params.id);
+    
+    user 
+    ? ( res.status(200).json(user) ) 
+    : res.status(404).json( { "message": `user ID ${req.params.id} not found` } )
 }
 
 

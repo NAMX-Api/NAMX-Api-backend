@@ -222,7 +222,6 @@
 20221129	09:55:05	25b56fa9-aaef-42b1-935c-e916ede41745	GET	undefined	/employees
 20221129	09:55:22	feb51971-d489-432f-85cf-bc59971d7b8b	POST	undefined	/auth
 20221129	09:55:40	9d5341c3-1b3e-4c0a-b820-846af3c22461	GET	undefined	/employees
-=======
 20221125	11:15:39	3cd0f438-df32-4b51-a5f2-048e63208a8d	GET	undefined	/
 20221125	11:15:39	40c7718d-bfc5-4ae4-b655-2baab6481b2b	GET	undefined	/favicon.ico
 20221125	12:26:38	5a393b98-a5a6-40ca-b17c-07b5c040e1c5	POST	undefined	/register
