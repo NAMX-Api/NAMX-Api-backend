@@ -3,7 +3,7 @@ const Users = require('../models/usersModel.js');
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
-    const { user, email , pwd} = req.body;
+    const { user, email , pwd , role} = req.body;
     if (!user || !pwd || !email) return res.status(400).json({ 'message': 'Username and password are required.' });
     // check for duplicate usernames in the db
     const duplicate = await Users.count({user : user});
@@ -15,7 +15,8 @@ const handleNewUser = async (req, res) => {
         const newUser = new Users({
             user: user,
             email: email,
-            pwd: hashedPwd
+            pwd: hashedPwd,
+            role: role,
         });
         newUser.save();
         res.json("Your Acount has been created");
