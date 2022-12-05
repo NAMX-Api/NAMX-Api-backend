@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
-const carSchema = mongoose.Schema(
-    {
-        name: {
+const detailSchema = mongoose.Schema(
+        {name: {
             type: String,
             required: true,
         },
@@ -10,9 +9,7 @@ const carSchema = mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             reqired: true,
             ref: "Admin",
-        }
-    },
-    { timestapms: true }
+        }}
 )
 
-module.exports = mongoose.model('Car', carSchema);
+module.exports = mongoose.model('Detail', detailSchema);
