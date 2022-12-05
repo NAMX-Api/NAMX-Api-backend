@@ -13,9 +13,6 @@ const carSchema = mongoose.Schema(
         description: {
             type: String,
             required: true,
-        },
-        details: {
-            type: [Number],
         }
     },
     { timestapms: true }

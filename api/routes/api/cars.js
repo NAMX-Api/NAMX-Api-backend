@@ -1,14 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const modelsController = require('../../controllers/modelsController');
+// const modelsController = require('../../controllers/modelsController.js');
+const carsController = require('../../controllers/carsController.js');
 
 router.route('/')
-    .get(modelsController.getAllModels)
-    .post(modelsController.createNewModel)
-    .put(modelsController.updateModel)
-    .delete(modelsController.deleteModel);
+    .get(carsController.getAllCars)
+    .post(carsController.createNewCar)
+//     .put(modelsController.updateModel)
+//     .delete(modelsController.deleteModel);
 
 router.route('/:id')
-    .get(modelsController.getEmployee);
+    .get(carsController.getCar);
+
+
+router.route('/newDetails/:id')
+    .post(carsController.addNewDetails)
 
 module.exports = router;

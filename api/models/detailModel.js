@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const detailSchema = mongoose.Schema(
     {
-        detail: {
+        detailName: {
             type: String,
             required: true,
         },
@@ -10,10 +10,9 @@ const detailSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        car: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "Car",
+        idCar : {
+            type : String,
+            required: true
         }
     },
     { timestapms: true }
