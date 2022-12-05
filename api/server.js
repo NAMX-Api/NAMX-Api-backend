@@ -11,7 +11,6 @@ const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3600;
 
-
 // custom middleware logger
 app.use(logger);
 

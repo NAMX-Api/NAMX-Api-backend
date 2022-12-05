@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 
 const detailSchema = mongoose.Schema(
     {
-        libelle: {
+        detail: {
             type: String,
             required: true,
         },
-        value: {
+        detailValue: {
             type: String,
             required: true,
         },
         car: {
             type: mongoose.Schema.Types.ObjectId,
-            reqired: true,
+            required: true,
             ref: "Car",
         }
     },
