@@ -41,6 +41,7 @@ app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
 app.use('/employees', require('./routes/api/employees'));
+app.use('/cars', require('./routes/api/cars.js'));
 app.use('/users', require('./routes/api/users'));
 
 app.all('*', (req, res) => {
