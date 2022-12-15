@@ -6,6 +6,7 @@ const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
+const verifyRefresh = require('./middleware/verifyRefresh');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose = require('mongoose');
@@ -41,7 +42,7 @@ app.use('/auth', require('./routes/auth'), require('./routes/admin'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
-app.use(verifyJWT);
+(app.use(verifyJWT))?app.use(verifyJWT):app.use(verifyRefresh)
 app.use('/employees', require('./routes/api/employees'));
 app.use('/cars', require('./routes/api/cars.js'));
 app.use('/users', require('./routes/api/users'));

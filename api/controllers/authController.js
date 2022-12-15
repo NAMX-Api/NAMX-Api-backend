@@ -31,7 +31,7 @@ const handleLogin = async (req, res, next) => {
             // Saving refreshToken with current user
             await Users.updateOne({ user: foundUser[0].user}, { refreshToken: refreshToken });
             res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
-            res.json({ accessToken });
+            res.json({ accessToken ,refreshToken} );
         } else {
             res.sendStatus(401);
         } 
