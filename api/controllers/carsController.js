@@ -17,10 +17,8 @@ const getAllCars = async (req, res) => {
 const getCar = async (req, res) => {
   const car = await carDB.findById(req.params.id);
   const details = await detailsDB.find({idCar : car._id});
-  car["details"] = details;
-
   car
-  ? (res.status(200).json(car))
+  ? (res.status(200).json({car, details}))
   : res.status(404).json({ "message": `car ID ${req.params.id} not found` })
 }
 
