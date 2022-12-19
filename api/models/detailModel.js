@@ -2,18 +2,17 @@ const mongoose = require('mongoose');
 
 const detailSchema = mongoose.Schema(
     {
-        libelle: {
+        detailName: {
             type: String,
             required: true,
         },
-        value: {
+        detailValue: {
             type: String,
             required: true,
         },
-        car: {
-            type: mongoose.Schema.Types.ObjectId,
-            reqired: true,
-            ref: "Car",
+        idCar : {
+            type : String,
+            required: true
         }
     },
     { timestapms: true }
